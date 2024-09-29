@@ -11,10 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({
-	{ import = "sothearo.plugins" },
-	{ import = "sothearo.plugins.lsp" },
-}, {
+require("lazy").setup("sothearo.plugins", {
 	change_detection = {
 		notify = false,
 	},
