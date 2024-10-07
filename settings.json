@@ -1,0 +1,96 @@
+{
+  "editor.fontSize": 16,
+  "editor.fontFamily": "Dank Mono",
+  "editor.tabSize": 2,
+  "editor.lineHeight": 1.5,
+  "editor.fontLigatures": true,
+  "window.zoomLevel": 1,
+  "terminal.integrated.gpuAcceleration": "off",
+  "workbench.colorTheme": "Min Dark",
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.location": "hidden",
+  "workbench.statusBar.visible": false,
+  "workbench.editor.showTabs": "single",
+  "workbench.layoutControl.enabled": false,
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
+  "editor.formatOnSave": true,
+  "terminal.explorerKind": "external",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "workbench.colorCustomizations": {
+    "terminal.background": "#00000000"
+  },
+  "workbench.settings.applyToAllProfiles": ["workbench.colorCustomizations"],
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "phase",
+  "editor.minimap.enabled": false,
+  // "editor.scrollbar.horizontal": "hidden",
+  // "editor.scrollbar.vertical": "hidden",
+  // "editor.overviewRulerBorder": false,
+  "editor.scrollbar.horizontalScrollbarSize": 3,
+  "editor.scrollbar.verticalScrollbarSize": 3,
+  "breadcrumbs.enabled": false,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.iconTheme": "catppuccin-frappe",
+  "window.titleBarStyle": "native",
+  "window.customTitleBarVisibility": "never",
+  "apc.electron": {
+    "frame": false
+  },
+  "apc.font.family": "Dank Mono",
+  "apc.listRow": {
+    "height": 24,
+    "fontSize": 14
+  },
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    {
+      "before": ["<Esc>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["lineBreakInsert"],
+      "silent": true
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  "workbench.editor.enablePreview": false,
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.stickyScroll.maxLineCount": 1,
+  "editor.stickyScroll.scrollWithEditor": false,
+  "editor.stickyScroll.enabled": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "update.mode": "manual"
+}
