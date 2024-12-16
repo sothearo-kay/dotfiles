@@ -1,2 +1,1 @@
-require("sothearo.core")
-require("sothearo.lazy")
+require("config.lazy")
