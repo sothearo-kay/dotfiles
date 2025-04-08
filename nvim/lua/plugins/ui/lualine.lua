@@ -4,6 +4,8 @@ return {
     "nvim-lualine/lualine.nvim",
     opts = function(_, opts)
       local LazyVim = require("lazyvim.util")
+
+      -- Customize lualine sections
       opts.sections.lualine_c[4] = {
         LazyVim.lualine.pretty_path({
           length = 0,
@@ -14,6 +16,20 @@ return {
           modified_sign = "",
           readonly_icon = " 󰌾 ",
         }),
+      }
+
+      -- Custom Sections with Rounded Separators
+      opts.sections.lualine_a = {
+        { "mode", separator = { left = "" }, right_padding = 2 },
+      }
+      opts.sections.lualine_z = {
+        { "location", separator = { right = "" }, left_padding = 2 },
+      }
+
+      -- Set component and section separators
+      opts.options = {
+        component_separators = "",
+        section_separators = { left = "", right = "" },
       }
     end,
   },
