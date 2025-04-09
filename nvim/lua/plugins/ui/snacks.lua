@@ -90,7 +90,6 @@ return {
             { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy" },
             { icon = " ", key = "q", desc = "Quit", action = ":qa" },
           },
-
           header = [[
 ███████╗ ██████╗ ████████╗██╗  ██╗███████╗ █████╗ ██████╗  ██████╗ 
 ██╔════╝██╔═══██╗╚══██╔══╝██║  ██║██╔════╝██╔══██╗██╔══██╗██╔═══██╗
@@ -102,15 +101,6 @@ return {
         },
         sections = {
           { section = "header", padding = 1, align = "center" },
-          -- {
-          --   section = "terminal",
-          --   pane = 2,
-          --   cmd = "img2art /home/redox/Pictures/allama-iqbal.png --threshold 50 --scale .34 --quant 16 --with-color",
-          --   height = 27,
-          --   width = 40,
-          --   padding = -40,
-          --   indent = 15,
-          -- },
           { icon = " ", title = "Recent Files", section = "recent_files", limit = 4, padding = 1 },
           { section = "keys", gap = 1, padding = 1 },
           { section = "startup" },
