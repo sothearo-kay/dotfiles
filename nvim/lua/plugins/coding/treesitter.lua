@@ -24,9 +24,11 @@ return {
         "lua",
         "html",
         "markdown",
+        "markdown_inline",
       },
       highlight = {
         additional_vim_regex_highlighting = true,
+        enable = true,
       },
     },
   },

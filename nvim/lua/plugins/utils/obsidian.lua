@@ -4,7 +4,6 @@ return {
     "epwalsh/obsidian.nvim",
     -- version = "*",
     lazy = true,
-    dev = false,
     cmd = "ObsidianQuickSwitch",
     ft = "markdown",
     keys = {
@@ -26,7 +25,7 @@ return {
     },
     opts = {
       ui = {
-        enable = false,
+        enable = true,
       },
       disable_frontmatter = function()
         -- get name of current file
@@ -35,14 +34,16 @@ return {
           return true
         end
       end,
-
       templates = {
         debug = true,
         folder = "~/vaults/notes/templates",
+        date_format = "%Y-%m-%d",
       },
       daily_notes = {
         folder = "daily",
-        template = "/daily notes.md",
+        template = "daily.md",
+        date_format = "%Y-%m-%d",
+        default_tags = {},
       },
       attachments = {
         img_folder = "Images",
