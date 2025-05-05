@@ -16,8 +16,6 @@ return {
     end,
   },
 
-  { "barreiroleo/ltex_extra.nvim" },
-
   -- lsp servers
   {
     "neovim/nvim-lspconfig",
@@ -66,13 +64,6 @@ return {
           settings = {
             yaml = {
               keyOrdering = false,
-            },
-          },
-        },
-        ltex_plus = {
-          settings = {
-            ltex = {
-              language = "en-US",
             },
           },
         },
@@ -142,25 +133,7 @@ return {
           },
         },
       },
-      setup = {
-        -- integrate ltex_extra with lazyvim
-        -- https://github.com/LazyVim/LazyVim/discussions/403
-        ltex_plus = function(_, opts)
-          vim.api.nvim_create_autocmd("LspAttach", {
-            callback = function(args)
-              local client = vim.lsp.get_client_by_id(args.data.client_id)
-              if client.name == "ltex_plus" then
-                require("ltex_extra").setup({
-                  load_langs = { "en-US" }, -- languages for witch dictionaries will be loaded
-                  init_check = true, -- whether to load dictionaries on startup
-                  path = vim.fn.stdpath("config") .. "/spell", -- path to store dictionaries.
-                  log_level = "none", -- "none", "trace", "debug", "info", "warn", "error", "fatal"
-                })
-              end
-            end,
-          })
-        end,
-      },
+      setup = {},
     },
   },
   {

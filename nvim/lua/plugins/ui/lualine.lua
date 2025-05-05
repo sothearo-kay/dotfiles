@@ -28,7 +28,7 @@ return {
 
       -- Set component and section separators
       opts.options = {
-        component_separators = "",
+        component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
       }
     end,
