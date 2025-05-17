@@ -1,0 +1,17 @@
+theme = catppuccin-mocha
+
+background-opacity = 0.9
+background-blur-radius = 20
+background = #1E1E2E
+
+#font-family = "PlemolJP Console NF"
+font-size = 15
+
+cursor-style = block
+cursor-style-blink = true
+
+#keybind = global:cmd+ctrl+shift+j=toggle_visibility
+
+macos-option-as-alt = left
+keybind = alt+left=unbind
+keybind = alt+right=unbind
