@@ -40,6 +40,7 @@ opt.splitright = true -- Put new windows right of current
 opt.splitkeep = "cursor"
 opt.mouse = ""
 opt.clipboard:prepend({ "unnamed", "unnamedplus" })
+opt.backupcopy = "yes"
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])

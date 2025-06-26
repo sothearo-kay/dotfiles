@@ -24,6 +24,11 @@ return {
       ---@type lspconfig.options
       servers = {
         cssls = {},
+        unocss = {
+          root_dir = function(...)
+            return require("lspconfig.util").root_pattern(".git")(...)
+          end,
+        },
         tailwindcss = {
           root_dir = function(...)
             return require("lspconfig.util").root_pattern(".git")(...)
