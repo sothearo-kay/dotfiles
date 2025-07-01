@@ -3,6 +3,7 @@
 -- Add any additional options here
 
 vim.g.mapleader = " "
+vim.g.lazyvim_eslint_auto_format = true
 
 local opt = vim.opt
 

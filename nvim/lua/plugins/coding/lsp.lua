@@ -1,3 +1,5 @@
+local auto_format = vim.g.lazyvim_eslint_auto_format == nil or vim.g.lazyvim_eslint_auto_format
+
 return {
   -- tools
   {
@@ -23,10 +25,17 @@ return {
       inlay_hints = { enabled = false },
       ---@type lspconfig.options
       servers = {
+        eslint = {
+          settings = {
+            -- helps eslint find the eslintrc when it's placed in a subfolder instead of the cwd root
+            workingDirectories = { mode = "auto" },
+            format = auto_format,
+          },
+        },
         cssls = {},
         unocss = {
           root_dir = function(...)
-            return require("lspconfig.util").root_pattern(".git")(...)
+            return require("lspconfig.util").root_pattern("uno.config.ts")(...)
           end,
         },
         tailwindcss = {
@@ -138,7 +147,38 @@ return {
           },
         },
       },
-      setup = {},
+      setup = {
+        eslint = function()
+          if not auto_format then
+            return
+          end
+
+          local function get_client(buf)
+            return LazyVim.lsp.get_clients({ name = "eslint", bufnr = buf })[1]
+          end
+
+          -- Always use EslintFixAll regardless of Neovim version
+          local formatter = LazyVim.lsp.formatter({
+            name = "eslint: EslintFixAll",
+            primary = true,
+            priority = 300,
+            filter = "eslint",
+            sources = function(buf)
+              local client = get_client(buf)
+              return client and { "eslint" } or {}
+            end,
+            format = function(buf)
+              local client = get_client(buf)
+              if client then
+                vim.cmd("EslintFixAll")
+              end
+            end,
+          })
+
+          -- register the formatter with LazyVim
+          LazyVim.format.register(formatter)
+        end,
+      },
     },
   },
   {

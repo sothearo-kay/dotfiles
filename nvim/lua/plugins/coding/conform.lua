@@ -5,10 +5,30 @@ return {
     cmd = { "ConformInfo" },
     opts = {
       formatters_by_ft = {
-        javascript = { "prettier" },
-        javascriptreact = { "prettier" },
-        typescript = { "prettier" },
-        typescriptreact = { "prettier" },
+        javascript = function(bufnr)
+          if require("conform").get_formatter_info("prettier", bufnr).available then
+            return { "prettier" }
+          end
+          return {}
+        end,
+        javascriptreact = function(bufnr)
+          if require("conform").get_formatter_info("prettier", bufnr).available then
+            return { "prettier" }
+          end
+          return {}
+        end,
+        typescript = function(bufnr)
+          if require("conform").get_formatter_info("prettier", bufnr).available then
+            return { "prettier" }
+          end
+          return {}
+        end,
+        typescriptreact = function(bufnr)
+          if require("conform").get_formatter_info("prettier", bufnr).available then
+            return { "prettier" }
+          end
+          return {}
+        end,
         vue = { "prettier" },
         svelte = { "prettier" },
         css = { "prettier" },
@@ -26,7 +46,7 @@ return {
       },
       formatters = {
         prettier = {
-          require_cwd = true, -- Only use prettier if config file exists
+          require_cwd = true,
         },
       },
     },
