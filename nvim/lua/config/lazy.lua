@@ -24,9 +24,6 @@ require("lazy").setup({
     },
     -- import/override with your plugins
     { import = "plugins" },
-    { import = "plugins.coding" },
-    { import = "plugins.ui" },
-    { import = "plugins.utils" },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
@@ -42,13 +39,14 @@ require("lazy").setup({
     notify = false, -- notify on update
   }, -- automatically check for plugin updates
   performance = {
+    cache = { enabled = true },
     rtp = {
       -- disable some rtp plugins
       disabled_plugins = {
         "gzip",
         -- "matchit",
         -- "matchparen",
-        -- "netrwPlugin",
+        "netrwPlugin",
         "tarPlugin",
         "tohtml",
         "tutor",

@@ -2,6 +2,9 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     lazy = false,
+    dependencies = {
+      "OXY2DEV/markview.nvim", -- This ensures markview loads first
+    },
     -- config = function(_, opts)
     --   require("nvim-treesitter.configs").setup(opts)
     --   vim.treesitter.language.register("markdown", "mdx")

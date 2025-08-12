@@ -1,20 +1,4 @@
 return {
-  -- {
-  --   "craftzdog/solarized-osaka.nvim",
-  --   lazy = true,
-  --   priority = 1000,
-  --   opts = function()
-  --     return {
-  --       transparent = true,
-  --       day_brightness = 0.5,
-  --       styles = {
-  --         sidebars = "transparent",
-  --         floats = "transparent",
-  --       },
-  --     }
-  --   end,
-  -- },
-
   {
     "catppuccin/nvim",
     lazy = true,
@@ -23,10 +7,7 @@ return {
     opts = function()
       return {
         flavour = "mocha",
-        background_transparent = true,
-        -- dim_inactive = {
-        --   enabled = true, -- dims the background color of inactive window
-        -- },
+        transparent_background = true,
       }
     end,
   },
